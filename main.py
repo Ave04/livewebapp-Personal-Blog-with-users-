@@ -11,8 +11,10 @@ from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 
-from dotenv import load_dotenv # pip install python-dotenv
+from dotenv import load_dotenv
+# pip install python-dotenv
 import os
+
 # Optional: add contact me email functionality
 # import smtplib
 
@@ -29,7 +31,7 @@ pip3 install -r requirements.txt
 
 This will install the packages from the requirements.txt for this project.
 '''
-load_dotenv("C:\Users\vikas\Google Drive\Avish\Udemy\PythonBootcamp\Projects\day71livewebapp\.env")
+load_dotenv(r"C:\Users\vikas\Google Drive\Avish\Udemy\PythonBootcamp\Projects\day71livewebapp\.env")
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('FLASK_KEY')
 # os.getenv('FLASK_KEY')
