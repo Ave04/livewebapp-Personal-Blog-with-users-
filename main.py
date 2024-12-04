@@ -34,7 +34,7 @@ This will install the packages from the requirements.txt for this project.
 load_dotenv(r"C:\Users\vikas\Google Drive\Avish\Udemy\PythonBootcamp\Projects\day71livewebapp\.env")
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('FLASK_KEY')
-# os.getenv('FLASK_KEY')
+
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 
