@@ -13,7 +13,7 @@ from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 
 from dotenv import load_dotenv # pip install python-dotenv
 import os
-# Optional: add contact me email functionality (Day 60)
+# Optional: add contact me email functionality
 # import smtplib
 
 
@@ -29,9 +29,9 @@ pip3 install -r requirements.txt
 
 This will install the packages from the requirements.txt for this project.
 '''
-# load_dotenv("C:\Users\vikas\Google Drive\Avish\Udemy\PythonBootcamp\Projects\day71livewebapp\.env")
+load_dotenv("C:\Users\vikas\Google Drive\Avish\Udemy\PythonBootcamp\Projects\day71livewebapp\.env")
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.getenv('FLASK_KEY')
 # os.getenv('FLASK_KEY')
 ckeditor = CKEditor(app)
 Bootstrap5(app)
