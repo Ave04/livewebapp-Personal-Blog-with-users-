@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 # pip install python-dotenv
 import os
 
-# Optional: add contact me email functionality
+# Optional: add contact me email functionalitypip install python-dotenvpip install python-dotenv
 # import smtplib
 
 
@@ -31,7 +31,7 @@ pip3 install -r requirements.txt
 
 This will install the packages from the requirements.txt for this project.
 '''
-load_dotenv(r"C:\Users\vikas\Google Drive\Avish\Udemy\PythonBootcamp\Projects\day71livewebapp\.env")
+load_dotenv(r"Enter-path-here")
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('FLASK_KEY')
 
@@ -283,9 +283,9 @@ def contact():
     return render_template("contact.html", current_user=current_user)
 
 
-# Optional: You can include the email sending code from Day 60:
+# Optional: You can include the email sending code:
 # DON'T put your email and password here directly! The code will be visible when you upload to Github.
-# Use environment variables instead (Day 35)
+# Use environment variables instead
 
 # MAIL_ADDRESS = os.environ.get("EMAIL_KEY")
 # MAIL_APP_PW = os.environ.get("PASSWORD_KEY")
